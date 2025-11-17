@@ -39,9 +39,12 @@ def filter_out_wrong_versions(builds, job):
     nodes = []
 
     # FIXME get this info from a central source (config.yaml)
+    if (r_ver == "4.6"):
+        if bioc_version == "3.23":
+            nodes = BUILD_NODES
     if (r_ver == "4.5"):
         if bioc_version == "3.22":
-            nodes = BUILD_NODES
+            nodes = ["nebbiolo2"]
     if (r_ver == "4.5"):
         if bioc_version == "3.21":
             nodes = ["nebbiolo1"]
